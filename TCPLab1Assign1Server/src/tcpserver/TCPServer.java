@@ -7,18 +7,20 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Date;
+
 
 public class TCPServer {
 	public static void main(String[] args) {
 		int port = 12345; 
 		try 
 		{             
-			ServerSocket ss = new ServerSocket(port);             
+			             
 			System.out.println("Server is ready to receive command!");
+			ServerSocket ss = new ServerSocket(port);
 			
 			while(true)
-			{                 
+			{             
+				
 				Socket socket = ss.accept(); 
 				InputStream is = socket.getInputStream(); //Read data as character
 				InputStreamReader isr = new InputStreamReader(is);//Read data as lines

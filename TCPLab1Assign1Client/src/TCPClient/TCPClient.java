@@ -15,9 +15,10 @@ public class TCPClient {
 		int port = 12345;
 		try
 		{
-			Socket socket = new Socket(hostName, port);
+			
 			while(true)
 			{
+				Socket socket = new Socket(hostName, port);
 				Scanner input = new Scanner(System.in);
 				System.out.print("Enter a command: ");
 		    	String request = input.nextLine();
